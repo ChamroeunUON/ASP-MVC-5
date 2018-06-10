@@ -5,6 +5,7 @@ namespace Vidly.Models
 {
     public class Customer
     {
+        [Display(Name = "ID")]
         public int Id { get; set; }
         
         [Required]
@@ -20,7 +21,7 @@ namespace Vidly.Models
 
         [Display(Name = "Date of Birth")]
         [Min18YearsIfAMember]
+        [DisplayFormat(ApplyFormatInEditMode = true, DataFormatString = "{0:d MMM yyyy}")]
         public DateTime? Birthdate { get; set; }
-
     }
 }

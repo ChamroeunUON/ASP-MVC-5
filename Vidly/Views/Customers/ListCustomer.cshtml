@@ -28,9 +28,9 @@
     <table id="customers" class="table table-bordered table-hover">
         <thead>
             <tr>
-                <th>Customer</th>
-                <th>Membership Type</th>
-                <th>Delete</th>
+                <th class="text-center">@Html.DisplayNameFor(id=>id.Id)</th>
+                <th class="text-center">@Html.DisplayNameFor(member => member.MembershipType)</th>
+                <th class="text-center">Delete</th>
             </tr>
         </thead>
         <tbody>
