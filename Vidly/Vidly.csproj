@@ -21,6 +21,7 @@
     <IISExpressWindowsAuthentication />
     <IISExpressUseClassicPipelineMode />
     <UseGlobalApplicationHostFile />
+    <Use64BitIISExpress />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -269,10 +270,6 @@
     <Compile Include="Migrations\201804221902506_SeedUsers1.cs" />
     <Compile Include="Migrations\201804221902506_SeedUsers1.Designer.cs">
       <DependentUpon>201804221902506_SeedUsers1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201804260813203_SeedUsers2.cs" />
-    <Compile Include="Migrations\201804260813203_SeedUsers2.Designer.cs">
-      <DependentUpon>201804260813203_SeedUsers2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\201804260925057_AddDrivingLicenseToApplicationUsers.cs" />
     <Compile Include="Migrations\201804260925057_AddDrivingLicenseToApplicationUsers.Designer.cs">
@@ -631,9 +628,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804221902506_SeedUsers1.resx">
       <DependentUpon>201804221902506_SeedUsers1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201804260813203_SeedUsers2.resx">
-      <DependentUpon>201804260813203_SeedUsers2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201804260925057_AddDrivingLicenseToApplicationUsers.resx">
       <DependentUpon>201804260925057_AddDrivingLicenseToApplicationUsers.cs</DependentUpon>

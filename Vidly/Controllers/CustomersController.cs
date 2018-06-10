@@ -10,7 +10,6 @@ namespace Vidly.Controllers
     public class CustomersController : Controller
     {
         private ApplicationDbContext _context;
-
         public CustomersController()
         {
             _context = new ApplicationDbContext();
@@ -21,7 +20,7 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
 
-        [Authorize(Roles = RoleName.CanManageMovies)]
+//        [Authorize(Roles = RoleName.CanManageMovies)]
         public ActionResult New()
         {
             var membershipTypes = _context.MembershipTypes.ToList();
@@ -72,7 +71,7 @@ namespace Vidly.Controllers
 //            return View(customers);
             if (User.IsInRole("CanManageMovies"))
                 return View("ListCustomer");
-            return View("ListCustomer");
+            return View("ReadOnlyCustomer");
         }
 
         public ActionResult Details(int id)
@@ -97,7 +96,6 @@ namespace Vidly.Controllers
                 Customer = customer,
                 MembershipTypes = _context.MembershipTypes.ToList()
             };
-
             return View("CustomerForm", viewModel);
         }
     }
